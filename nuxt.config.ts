@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: {name: 'page', mode: 'out-in'},
     baseURL: '/getting-tasks-done/',
+    buildAssetsDir: 'assets',
   },
   ssr: false,
 
@@ -34,10 +35,4 @@ export default defineNuxtConfig({
       FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
     },
   },
-
-  // router: {
-  //   options: {
-
-  //   }
-  // },
 })
