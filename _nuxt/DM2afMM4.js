@@ -1,1 +1,0 @@
-import{aN as u,ac as n,aO as o}from"./CYJJeFsx.js";const l=u(i=>{const{$auth:s}=n(),t=!["/login","/register"].includes(i.path);return new Promise(e=>{o(s,a=>{t&&!a?e("/login"):!t&&a?e("/"):e()})})});export{l as default};
