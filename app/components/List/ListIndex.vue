@@ -28,7 +28,7 @@ function showModalNewTask(title: Title) {
 }
 
 async function onDrop(e: DragEvent, col: ListItemType): Promise<void> {
-  const [listName, dropName] = e.dataTransfer!.getData('id').split(' ')
+  const [_, listName, dropName] = e.dataTransfer!.getData('id').match(/^(\S+)\s(.+)$/)!
   if (col.title === listName) return
   const findDataArrayById = dataList.value.find(({title}) => title === listName)!
   const dataIndex = findDataArrayById.data.findIndex(({name}) => name === dropName)
